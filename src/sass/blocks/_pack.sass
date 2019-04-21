@@ -1,0 +1,160 @@
+.pack
+	padding: 50px 0
+	&-text
+		+reg
+		font-size: 22px
+		max-width: 800px
+		margin: auto
+		text-align: center
+		color: #cb454c
+		margin-bottom: 60px
+		&__bold
+			+bold
+	&-wrap
+		display: flex
+		justify-content: space-between
+		&__item
+			padding: 10px
+			background-color: #f9f9f9
+			border: 3px solid #f1971e
+			flex-basis: 31%
+			height: 580px
+			position: relative
+			z-index: 1
+		&__optimal
+			&:before
+				content: ''
+				width: 133px
+				height: 30px
+				position: absolute
+				background: url('../img/optimal.png')
+				right: -3px
+				top: 60px
+				z-index: 3
+		&__half
+			&:after
+				content: ''
+				width: 50%
+				height: 101%
+				position: absolute
+				background-color: #f9f9f9
+				right: -3px
+				top: -3px
+				z-index: -1
+		&__quart
+			height: 620px
+			&:after
+				content: ''
+				width: 50%
+				height: 50%
+				position: absolute
+				background-color: #f9f9f9
+				right: -3px
+				bottom: -3px
+				z-index: -1
+		&__full
+			height: 695px
+	&-title
+		+bold
+		font-size: 30px
+		line-height: 35px
+	&-list
+		+reg
+		font-size: 17px
+		list-style: none
+		padding-left: 50px
+		margin-bottom: 30px
+		&__item
+			margin: 20px 0
+			padding-right: 15px
+			&:before
+				content: ''
+				width: 22px
+				height: 22px
+				position: absolute
+				background: url('../img/check-ok.png') no-repeat left
+				left: 30px
+		&__redcheck
+			margin: 15px 0
+			padding-right: 15px
+			&:before
+				content: ''
+				width: 22px
+				height: 22px
+				position: absolute
+				background: url('../img/check-extra.png') no-repeat left
+				left: 30px
+.item
+	display: flex
+	padding-top: 20px
+	padding-left: 35px
+	align-items: center
+.item img
+	margin-right: 15px
+	height: 89px
+.calc
+	width: 288px
+	height: 50px
+	background-color: #cb454c
+	border: none
+	outline: none
+	margin-left: 20px
+	margin-right: 25px
+	cursor: pointer
+	transition: 0.4s ease
+	&:hover
+		background-color: #d26066
+	&-title
+		+bold
+		color: #fffefe
+		font-size: 25px
+		margin: 10px 0
+///////////////////////////////////// оформление гэпа
+.gap
+	&-box
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&-line
+		height: 3px
+		background-color: #e8e8e8
+		width: 80%
+//////////////////////////// media@ //////////////////////////////
+@media (max-width: 1200px)
+	.pack
+		&-wrap
+			flex-wrap: wrap
+			justify-content: space-around
+			&__item
+				flex-basis: 51%
+				margin-bottom: 30px
+		&-text
+			font-size: 20px
+@media (max-width: 590px)
+	.pack
+		&-text
+			font-size: 16px
+			padding: 0 15px
+		&-list
+			font-size: 14px
+		&-wrap
+			&__item
+				height: 545px
+			&__quart
+				height: 580px
+			&__full
+				height: 645px
+@media (max-width: 400px)
+	.pack
+		&-wrap
+			&__optimal
+				&:before
+					top: 20px
+
+	.calc
+		width: 230px
+		&-title
+			font-size: 20px
+
+
+

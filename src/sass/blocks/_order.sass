@@ -1,0 +1,156 @@
+.order
+	padding-top: 30px
+	padding-bottom: 40px
+	// height: 260px
+	box-shadow: 0 15px 15px rgba(22, 70, 95, 0.1)
+	background-color: #008fdb
+	&-title
+		text-align: center
+		+minsk
+		font-size: 40px
+		color: #ffffff
+		margin-top: 10px
+	&-form
+		display: flex
+		justify-content: space-between
+		position: relative
+		&__item
+			flex-basis: 23%
+			+reg
+			font-size: 20px
+	&-form #username-error
+		position: absolute
+		+reg
+		top: -20px
+		left: 5.5%
+		z-index: 10
+		color: #ffffff
+	&-form	#phone-error
+		position: absolute
+		+reg
+		top: -20px
+		left: 32%
+		z-index: 10
+		color: #ffffff
+	&-form	#email-error
+		position: absolute
+		+reg
+		top: -20px
+		right: 33%
+		z-index: 10
+		color: #ffffff
+	&-form input
+		height: 49px
+		box-shadow: 0 15px 15px rgba(22, 70, 95, 0.1)
+		border-radius: 2px
+		background-color: #ffffff
+		border: none
+		padding-left: 15px
+	&-button
+		+minsk
+		text-transform: uppercase
+		color: #ffffff
+		border-radius: 2px
+		border: 2px solid #ffffff
+		background-color: #008fdb
+		cursor: pointer
+		transition: .4s ease
+		&:hover
+			background-color: #ffffff
+			color: #008fdb
+		&:hover:disabled
+			background-color: #008fdb
+			color: #ffffff
+.agree
+	text-align: center
+	margin-top: 30px
+	&-text
+		+reg
+		font-size: 17px
+		text-transform: uppercase
+		color: #ffffff
+		letter-spacing: 1.7px
+		padding-left: 20px
+		position: relative
+		margin-bottom: 20px
+	&-under
+		border-bottom: 1px solid #ffffff
+		cursor: pointer
+	&-check
+		display: none
+#agree-message
+	margin-top: 10px
+	display: none
+.agree i
+	display: inline-block
+	width: 20px
+	height: 20px
+	background: #ffffff
+	border-radius: 50%
+	position: relative
+	left: 0px
+	top: 4px
+	cursor: pointer
+	&:before
+		content: ''
+		position: absolute
+		width: 12px
+		height: 12px
+		background-color: #008fdb
+		border-radius: 50%
+		left: 4px
+		top: 4px
+		transform: scale(0)
+		transition: 0.2s
+.agree input:checked+i:before
+		transform: scale(1)
+.success
+	position: absolute
+	top: -20px
+	+reg
+	color: #ffffff
+	right: 50px
+//////////////////////////// media@ //////////////////////////////
+@media (max-width: 992px)
+	.order
+		&-title
+			font-size: 34px
+		&-form
+			flex-direction: column
+			&__item
+				width: 75%
+				margin: auto
+				margin-bottom: 25px
+		&-button
+			margin: auto
+			height: 49px
+		&-form #username-error
+			top: 52px
+			left: 43%
+		&-form	#phone-error
+			top: 126px
+			left: 43%
+		&-form	#email-error
+			top: 200px
+			left: 43%
+	.success
+  	bottom: -25px
+  	right: 39%
+@media (max-width: 768px)
+	.order
+		&-title
+			font-size: 26px
+	.agree
+		&-text
+			font-size: 14px	
+@media (max-width: 590px)
+	.order
+		&-title
+			font-size: 20px
+	.agree
+		width: 90%
+		margin-left: auto
+		margin-right: auto
+		&-text
+			font-size: 12px
+			letter-spacing: 1px

@@ -1,0 +1,201 @@
+.header
+	padding: 23px 0
+.logo
+	width: 100%
+	cursor: pointer
+.menu
+	display: flex
+	justify-content: space-between
+	align-items: center
+	&-modetime
+		position: relative
+		&:before
+			content: ''
+			width: 27px 
+			height: 27px
+			position: absolute
+			background: url('../img/worktime.png') no-repeat center
+			top: 4px
+			left: -40px
+	&-modecall
+		position: relative
+		&:before
+			content: ''
+			width: 26px 
+			height: 28px
+			position: absolute
+			background: url('../img/phone.png') no-repeat center
+			top: 4px
+			left: -40px
+	&-text
+		font-family: 'Calibri Light'
+		color: #737373
+		font-size: 17px
+		margin-bottom: 5px
+		display: inline-block
+	&-data
+		font-family: 'Minsk regular'
+		font-size: 24px
+		color: #2a2a2a
+		&__tel
+			text-decoration: none
+			color: #2a2a2a
+	&-button
+		width: 215px
+		height: 50px
+		border-radius: 5px
+		border: 1px solid #008fdb
+		background: #ffffff
+		transition: all 0.5s linear
+		&:hover
+			cursor: pointer
+			color: #ffffff
+			background: #008fdb
+			transition: all 0.3s ease
+		&:hover span
+			color: #ffffff
+			transition: all 0.3s ease
+		&__bluetext
+			color: #008fdb
+			font-family: 'Minsk regular'
+			font-size: 15px
+		&__regular
+			font-family: 'Calibri Light'
+			font-size: 15px
+			color: #737373
+	&-sub
+		list-style: none
+		padding-left: 0
+		margin-top: 10px
+		position: absolute
+		margin-top: 0
+		top: 20px
+		left: 0px
+		display: block
+		width: 200px
+		font-size: 12px
+		transition: 0.4s
+		opacity: 0
+		visibility: hidden
+		&__item
+			padding: 12px 12px 8px 12px
+			background: #ffffff
+			border: 1px solid #e0e0e0
+			border-bottom: none
+			cursor: pointer
+			&:last-child
+				border-bottom: 1px solid #e0e0e0
+			&:hover a
+				color: #000
+				transition: 0.4s linear
+////////////////////////////////////////////// оформление меню навигации
+.nav
+	padding: 17px 0
+	border-top: 1px solid #e0e0e0
+	&-menu
+		display: flex
+		justify-content: space-between
+		align-items: center
+		position: relative
+		&__btn
+			position: absolute
+			display: none
+		&__list
+			list-style: none
+			display: flex
+			flex-basis: 85%
+			justify-content: space-between
+			padding-left: 0
+			margin: 10px 0
+		&__item
+			position: relative
+			&:hover ul
+				opacity: 1
+				visibility: visible
+				z-index: 10
+		&__item a
+			font-family: 'Minsk regular'
+			font-size: 13px
+			color: #8f8f8f
+			text-decoration: none
+			&:hover
+				color: #000
+				transition: 0.4s linear
+		&__socialcolumn
+			display: flex
+			flex-direction: column
+.fas
+	vertical-align: top
+	font-size: 14px
+////////////////////////////////////////////// оформление заголовка
+.section-title
+	padding: 20px
+	background-color: #cb454c
+	text-align: center
+.title
+	+minsk
+	color: #fffefe
+	font-size: 40px
+	margin: 10px 0
+//////////////////////////// media@ //////////////////////////////
+@media (max-width: 1200px)
+	.menu
+		flex-wrap: wrap
+		&-item
+			// flex-basis: 50%
+		&-modetime
+			display: none
+	.title
+		font-size: 34px
+@media (max-width: 992px)
+	.logo
+		width: 80%
+	.nav
+		padding-bottom: 10px
+		&-menu
+			&__btn
+				display: block
+			&__list
+				flex-basis: 87%
+				flex-direction: column
+				display: none
+			&__item
+				flex-basis: 18%
+				margin-bottom: 15px
+				&:first-child
+					flex-basis: 12%
+			&__social
+				margin-left: auto
+			&__link
+				margin-right: 5px
+			&__show
+				display: block
+	.title
+		font-size: 28px
+	.menu
+		&-sub
+			&__item
+				width: 250px
+@media (max-width: 768px)
+	.menu
+		// flex-direction: column
+		&-item
+			margin-bottom: 20px
+	.nav
+		&-menu
+			&__btn
+				display: block
+			&__list
+				flex-basis: 60%
+@media (max-width: 590px)
+	.title
+		font-size: 20px
+@media (max-width: 530px)
+	.logo
+		width: 100%
+	.menu
+		flex-direction: column
+
+				
+	
+

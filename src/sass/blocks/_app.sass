@@ -1,0 +1,240 @@
+.app
+	padding-top: 70px
+	&-form
+		padding-top: 20px
+.category
+	display: flex
+	justify-content: space-around
+	text-align: center
+	margin-bottom: 50px
+	&-item
+		cursor: pointer
+	&-img
+		display: block
+		margin: auto
+		margin-bottom: 20px
+	&-text
+		display: block
+		margin-bottom: 20px
+		+reg
+		font-size: 20px
+	&-radio
+		display: none
+.app i
+	display: inline-block
+	width: 21px
+	height: 21px
+	border: 1px solid #d0d0d0
+	border-radius: 50%
+	position: relative
+	&:before
+		content: ''
+		position: absolute
+		width: 13px
+		height: 13px
+		background-color: #cb454c
+		border-radius: 50%
+		left: 3px
+		top: 3px
+		transform: scale(0)
+		transition: 0.2s
+.app input:checked+i:before
+		transform: scale(1)
+////////////////////////////////////// оформление полей формы
+.app
+	&-field
+		display: flex
+		justify-content: space-between
+		&__column
+			display: flex
+			// flex-basis: 50%
+			flex-direction: column
+			align-items: center
+		&__item
+			position: relative
+			border: 1px solid #d9d9d9
+			width: 555px
+			margin-bottom: 30px
+			display: flex
+			justify-content: space-between
+			align-items: center
+		&__itemq
+			width: 520px
+			margin-right: auto
+		&__range
+			border: none
+		&__age
+			display: flex
+			justify-content: space-around
+			padding: 30px
+			align-items: center
+	&-select
+		width: 100%
+		min-width: 300px
+		height: 48px
+		border: none
+		outline: none
+		padding-left: 12px
+		padding-right: 12px
+		cursor: pointer
+		+reg
+		font-size: 19px
+	&-value
+		display: block
+		width: 75px
+		height: 48px
+		border: none
+		+bold
+		color: #ff3333
+		font-size: 18px	
+		padding-right: 6px
+		outline: none
+		&__width
+			width: 75px
+		&__itemq
+			width: 75px
+		&__credit
+			width: 75px
+		&__credit2
+			width: 75px
+	&-label
+		+reg
+		font-size: 19px
+		padding-left: 10px
+	&-question
+		position: absolute
+		right: -7%
+		top: 20%
+		cursor: pointer
+//////////////////////////////////////// оформление ползунка
+.app
+	&-range
+		width: 100%
+		appearance: none
+		height: 9px
+		border-radius: 2px
+		background-color: #e8e8e8
+		outline: none
+		&::-webkit-slider-thumb
+			appearance: none
+			width: 20px
+			height: 20px
+			border: 1px solid #d0d0d0
+			background-color: #ffffff
+			border-radius: 50%
+			cursor: pointer
+//////////////////////////////////////// оформление трудящийся и пенсионер
+.age
+	display: flex
+	flex-direction: column
+	cursor: pointer
+	position: relative
+	&-img
+		width: 75px
+		filter: grayscale(100%)
+		margin: auto
+		margin-bottom: 22px
+	&-text
+		+reg
+		font-size: 20px
+	&-radio
+		display: none
+	&-choose
+		&:after
+			content: ''
+			width: 37px 
+			height: 28px
+			position: absolute
+			background: url('../img/v.png') no-repeat center
+			top: 35px
+			left: 85px
+	&-choose img
+		filter: grayscale(0)
+.ageword
+	font-size: 20px
+	+minsk
+.field-req
+	+reg
+	font-size: 18px
+	color: #cb454c
+	text-align: center
+	margin-bottom: 40px
+////////////////////////////////////  оформление кнопки
+.comput
+	width: 556px
+	height: 49px
+	border-radius: 2px
+	background-color: #cb454c	
+	display: block
+	margin: auto
+	margin-bottom: 50px
+	border: none
+	color: #fffefe
+	+minsk
+	font-size: 25px
+	cursor: pointer
+	transition: 0.4s ease
+	&:hover
+		background-color: #d26066
+//////////////////////////// media@ //////////////////////////////
+@media (max-width: 1200px)
+	.app
+		&-field
+			flex-wrap: wrap
+			justify-content: space-around
+@media (max-width: 992px)	
+	.comput
+		width: 75%	
+	.category
+		flex-wrap: wrap
+		&-item
+			flex-basis: 50%
+			margin-bottom: 30px
+@media (max-width: 640px)
+	.app
+		&-field
+			&__column
+				flex-basis: 100%
+			&__item
+				width: 100%
+			&__itemq
+				width: 93%
+@media (max-width: 590px)
+	.app
+		&-field
+			&__itemq
+				width: 91%
+		&-question
+			right: -9%
+@media (max-width: 490px)	
+	.app
+		&-select
+			font-size: 16px
+		&-label
+			font-size: 16px
+		&-field
+			&__age
+				flex-direction: column
+				padding-bottom: 0
+			&__age label
+				margin-bottom: 25px
+			&__itemq
+				width: 89%
+		&-question
+			right: -11%
+	.category
+		&-item
+			flex-basis: 100%
+@media (max-width: 400px)	
+	.app
+		&-field
+			&__itemq
+				width: 87%
+		&-question
+			right: -13%
+
+
+
+		
+
+

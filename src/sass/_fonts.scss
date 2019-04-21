@@ -1,0 +1,31 @@
+@font-face {
+	font-display: swap;
+	font-family: 'Minsk regular';
+	src: local('Minsk regular'),
+		url("../fonts/Minsk-regular.otf") format("truetype");	
+}
+@font-face {
+	font-display: swap;
+	font-family: 'Calibri Light';
+	src: local('Calibri Light'),
+		url("../fonts/Calibri-Light.ttf") format("truetype");
+}
+@font-face {
+	font-display: swap;
+	font-family: 'Calibri Bold';
+	src: local('Calibri Bold'),
+		url("../fonts/Calibri-Bold.ttf") format("truetype");
+}
+
+@mixin reg {
+	font-family: 'Calibri Light', serif;
+	font-weight: 300;
+}
+@mixin bold {
+	font-family: 'Calibri Bold', serif;
+	font-weight: 700;
+}
+@mixin minsk {
+	font-family: 'Minsk regular', serif;
+	font-weight: 400;
+}
